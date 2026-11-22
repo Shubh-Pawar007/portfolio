@@ -87,7 +87,7 @@ export const projects: Project[] = [
     tag: 'AI + GovTech',
     description:
       'Marathi-first workflow app for Maharashtra field officers processing crop-damage compensation applications. Four-step review flow with Gemini AI assist, built and shipped as a take-home in days.',
-    stack: ['Next.js', 'TypeScript', 'Gemini', 'Tailwind CSS'],
+    stack: ['Next.js', 'TypeScript', 'Gemini'],
     live: 'https://shetkari-sahayak.netlify.app',
     repo: 'https://github.com/Shubh-Pawar007/shetkari-sahayak',
   },
@@ -106,8 +106,8 @@ export const projects: Project[] = [
     year: '2026',
     tag: 'Frontend',
     description:
-      'A highly interactive employee analytics and management dashboard with rich charts, filtering and a polished, premium UI.',
-    stack: ['React', 'TypeScript', 'Tailwind CSS'],
+      'An employee analytics and management dashboard with AG Grid tables, employee metrics, sorting and filtering.',
+    stack: ['React', 'TypeScript', 'AG Grid'],
     live: 'https://fabulous-begonia-4d8a46.netlify.app',
     repo: 'https://github.com/Shubh-Pawar007/factwise-dashboard',
   },
