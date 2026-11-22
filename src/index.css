@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #05060f;
+  --panel: rgba(255, 255, 255, 0.04);
+  --stroke: rgba(255, 255, 255, 0.09);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: #e7e9f2;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.5);
+}
+
+.glass {
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.grad-text {
+  background: linear-gradient(92deg, #818cf8 0%, #22d3ee 55%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow-ring {
+  box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.35), 0 0 40px rgba(34, 211, 238, 0.12);
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-floaty { animation: floaty 5s ease-in-out infinite; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 28s linear infinite; }
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-floaty, .animate-marquee { animation: none; }
+}
+.static-orb{position:absolute;width:26rem;height:26rem;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-25deg);border-radius:44% 56% 62% 38%;background:radial-gradient(circle at 28% 24%,#9cafff,#5146dc 26%,#17135b 62%,#060712 80%);box-shadow:inset -20px -30px 65px #01020a,0 0 120px #4f46e530;opacity:.65}
+.static-orbit{position:absolute;left:50%;top:50%;width:35rem;height:18rem;border:1px solid #67e8f940;border-radius:50%;transform:translate(-50%,-50%) rotate(-35deg)}
+.static-orbit.second{transform:translate(-50%,-50%) rotate(35deg);border-color:#a5b4fc30}
+section{scroll-margin-top:90px}
+a:focus-visible{outline:2px solid #67e8f9;outline-offset:5px}
+@media(max-width:639px){header nav{margin-left:12px;margin-right:12px}.static-orb{width:23rem;height:23rem}section#contact a[href^="mailto:"]{font-size:13px;padding:14px 15px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.tilt-card{transform:none!important}}
