@@ -21,5 +21,5 @@ export default function Hero3D() {
     return ()=>{media.removeEventListener('change',update);narrow.removeEventListener('change',update)}
   },[])
   if(!ok)return <GradientFallback/>
-  return <div className="absolute inset-0 -z-10" aria-hidden="true"><SceneBoundary><Suspense fallback={<GradientFallback/>}><Scene3D/></Suspense></SceneBoundary></div>
+  return <div className="absolute inset-0 -z-10" aria-hidden="true"><SceneBoundary><Suspense fallback={<GradientFallback/>}><Scene3D onSlow={()=>setOk(false)}/></Suspense></SceneBoundary></div>
 }
